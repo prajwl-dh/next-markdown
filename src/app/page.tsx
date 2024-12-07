@@ -13,7 +13,7 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, type: 'spring' }}
         />
-        <div className='w-screen h-[calc(100dvh-70px)] px-1 md:px-14 flex flex-col items-center'>
+        <div className='w-screen h-[calc(100dvh-70px)] px-1 md:px-14 flex flex-col items-center overflow-y-scroll'>
           <Home />
         </div>
         <Footer />

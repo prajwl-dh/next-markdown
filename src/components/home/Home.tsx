@@ -21,10 +21,11 @@ export default function Home() {
         Editor
       </p>
       <p className='text-start md:text-center !leading-relaxed sm:text-lg md:text-xl text-light-text-secondary dark:text-dark-text-secondary'>
-        A lightweight markdown editor to write and preview blogs or any markdown
-        content instantly, then export as JSON for seamless integration with
-        your applications. Ideal for developers and creators looking for a
-        responsive, feature-rich tool to streamline their workflow.
+        A lightweight free to use markdown editor to write and preview blogs or
+        any markdown content instantly, then export as JSON for seamless
+        integration with your applications. Ideal for developers and creators
+        looking for a responsive, feature-rich tool to streamline their
+        workflow.
       </p>
       <div className='flex gap-2'>
         <Button
