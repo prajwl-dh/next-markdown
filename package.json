@@ -13,6 +13,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
+    "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.13.1",
     "lucide-react": "^0.468.0",
@@ -22,7 +23,8 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.5.5",
     "tailwind-scrollbar-hide": "^1.1.7",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-bg-patterns": "^0.3.0"
   },
   "devDependencies": {
     "@types/node": "^20",

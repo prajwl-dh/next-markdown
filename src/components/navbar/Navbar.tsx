@@ -26,11 +26,11 @@ export default function Navbar({
       initial={initial}
       animate={animate}
       transition={transition}
-      className={`w-full h-[65px] px-1 md:px-14 flex flex-row justify-between shadow-sm items-center fixed left-0 top-0 z-50 bg-light-foreground dark:bg-dark-foreground backdrop-blur-md bg-opacity-50 dark:bg-opacity-50 border-b-[1px] border-slate-200 dark:border-stone-700`}
+      className={`w-full h-[70px] px-2 md:px-14 flex flex-row justify-between shadow-sm items-center fixed left-0 top-0 z-50 bg-background/80 backdrop-blur-md bg-opacity-50 dark:bg-opacity-50 border-b-[1px] border-slate-200 dark:border-stone-700`}
     >
       <div
         onClick={() => router.push('/')}
-        className='flex flex-row items-center cursor-pointer -space-x-1'
+        className='flex flex-row items-center cursor-pointer -space-x-2'
       >
         <Logo
           src={'/logo.png'}
@@ -41,11 +41,11 @@ export default function Navbar({
           className='h-10 w-10 rounded-sm border-secondaryText border-[3px]'
           priority
         />
-        <div className='flex flex-col items-center space-x-2 -space-y-1'>
-          <p className='text text-xl font-bold text-light-text-primary dark:text-dark-text-primary -ml-6'>
+        <div className='flex flex-col items-center space-x-4 -space-y-1'>
+          <p className='text text-xl font-bold text-light-text-primary dark:text-dark-text-primary -ml-[1.2rem]'>
             Next
           </p>
-          <p className='text text-md text-light-text-primary dark:text-dark-text-primary -ml-6'>
+          <p className='text text-md text-light-text-primary dark:text-dark-text-primary -ml-8'>
             Markdown
           </p>
         </div>
