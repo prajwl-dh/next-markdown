@@ -29,6 +29,7 @@ export default function Home() {
       <div className='flex gap-2'>
         <Button
           className='h-12 min-w-32 flex gap-2 items-center text-md shadow-sm'
+          onMouseEnter={() => router.prefetch('/playground')}
           onClick={() => router.push('/playground')}
         >
           Playground <ArrowRight />
