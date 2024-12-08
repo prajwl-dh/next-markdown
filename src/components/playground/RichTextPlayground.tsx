@@ -6,9 +6,9 @@ import {
   ResizablePanelGroup,
 } from '@/components/ui/resizable';
 import useScreenWidth from '@/hooks/useScreenWidth';
-import MarkdownEditor from '../markdown-editor/MarkdownEditor';
+import RichTextEditor from '../richtext-editor/RichTextEditor';
 
-export default function MDXPlayground() {
+export default function RichTextPlayground() {
   const width = useScreenWidth();
 
   if (width === 0) return null;
@@ -16,7 +16,7 @@ export default function MDXPlayground() {
   return (
     <ResizablePanelGroup direction={width < 992 ? 'vertical' : 'horizontal'}>
       <ResizablePanel className='h-full' defaultSize={width < 992 ? 60 : 50}>
-        <MarkdownEditor />
+        <RichTextEditor />
       </ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel className='h-full' defaultSize={width < 992 ? 40 : 50}>

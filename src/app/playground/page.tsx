@@ -1,5 +1,5 @@
 import Navbar from '@/components/navbar/Navbar';
-import MDXPlayground from '@/components/playground/MDXPlayground';
+import RichTextPlayground from '@/components/playground/RichTextPlayground';
 import { Button } from '@/components/ui/button';
 
 export default function Playground() {
@@ -11,7 +11,7 @@ export default function Playground() {
         </Button>
       </Navbar>
       <div className='w-screen h-[calc(100dvh-70px)]'>
-        <MDXPlayground />
+        <RichTextPlayground />
       </div>
     </div>
   );
