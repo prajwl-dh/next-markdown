@@ -1,5 +1,5 @@
 'use client';
 
 export default function MarkdownEditor() {
-  return <>Editor</>;
+  return <div className='h-full'>Editor</div>;
 }
