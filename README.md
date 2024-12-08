@@ -1,11 +1,9 @@
-# next-markdown
+# Next Markdown
 
-**next-markdown** is a modern, lightweight markdown editor and previewer built using **Next.js**, **React**, **TailwindCSS**, **MDX**, and **Facebook's Lexical Markdown Editor**. It supports seamless editing, real-time previews, and exporting markdown as JavaScript code/strings, making it easy to store in JSON files.
+**Next Markdown** is a modern, lightweight rich text editor built using **Next.js**, **React**, **TailwindCSS**, and **MDX**. It provides live content preview and offers export functionality in both markdown syntax and as a JSON object, making it easy to integrate with markdown-to-HTML converters on your website. This tool enables seamless content management and dynamic rendering across platforms.
 
 ## Features
 
-- **Interactive Markdown Editing**: Write and preview markdown in real time.
-- **MDX Support**: Extend markdown with React components.
-- **Export Functionality**: Save your markdown as JavaScript strings or JSON-ready formats.
-- **Beautiful UI**: Styled with TailwindCSS for a clean and responsive interface.
-- **Powered by Lexical**: Leverages Facebook's Lexical Editor for rich markdown capabilities.
+- **Interactive Markdown Editing**: Write and preview rich text with live updates.
+- **Export Functionality**: Save your content in markdown or JSON format.
+- **Beautiful UI**: Designed with TailwindCSS for a clean, responsive experience.

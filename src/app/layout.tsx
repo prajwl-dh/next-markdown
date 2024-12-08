@@ -11,8 +11,9 @@ const onestSans = Onest({
 });
 
 export const metadata: Metadata = {
-  title: 'Next Markdown',
-  description: 'A modern, lightweight markdown editor and previewer',
+  title: 'Next Editor',
+  description:
+    'A modern, lightweight rich text editor, previewer, and markdown converter',
 };
 
 export default function RootLayout({

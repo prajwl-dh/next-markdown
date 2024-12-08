@@ -41,12 +41,12 @@ export default function Navbar({
           className='h-10 w-10 rounded-sm border-secondaryText border-[3px]'
           priority
         />
-        <div className='flex flex-col items-center space-x-4 -space-y-1'>
-          <p className='text text-xl font-bold text-light-text-primary dark:text-dark-text-primary -ml-[1.2rem]'>
+        <div className='flex flex-col items-start space-x-4 -space-y-1'>
+          <p className='text text-xl font-bold text-light-text-primary dark:text-dark-text-primary ml-4'>
             Next
           </p>
-          <p className='text text-md text-light-text-primary dark:text-dark-text-primary -ml-8'>
-            Markdown
+          <p className='text text-sm text-light-text-primary dark:text-dark-text-primary -ml-8'>
+            Editor
           </p>
         </div>
       </div>
