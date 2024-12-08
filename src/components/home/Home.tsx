@@ -17,7 +17,7 @@ export default function Home() {
       className='w-full 2xl:w-10/12 px-1 xl:px-40 flex flex-col justify-center items-start md:items-center gap-10 min-h-[75vh] z-10'
     >
       <p className='text-3xl text-start md:text-center font-bold leading-tight text-light-text-primary dark:text-dark-text-primary sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight mt-5 lg:mt-10'>
-        Create, Preview, and Export Markdown Easily with the Next Rich Text
+        Create, Preview, and Export Contents Easily with the Next Rich Text
         Editor
       </p>
       <p className='text-start md:text-center !leading-relaxed sm:text-lg md:text-xl text-light-text-secondary dark:text-dark-text-secondary'>
