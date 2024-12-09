@@ -46,7 +46,7 @@ export default function Editor() {
   }
 
   async function convertToMarkdown() {
-    const editorContent = await editor?.blocksToMarkdownLossy(editor.document);
+    // const editorContent = await editor?.blocksToMarkdownLossy(editor.document);
   }
 
   return (
