@@ -45,13 +45,18 @@ export default function Editor() {
     return null;
   }
 
+  async function convertToMarkdown() {
+    const editorContent = await editor?.blocksToMarkdownLossy(editor.document);
+  }
+
   return (
     <BlockNoteView
-      className='h-full py-2 bg-white dark:bg-[#1f1f1f] overflow-y-auto'
+      className='h-full py-2 px-4 md:px-14 bg-white dark:bg-[#1f1f1f] overflow-y-auto'
       editor={editor}
       theme={blockNoteTheme}
       onChange={() => {
         saveToStorage(editor.document);
+        convertToMarkdown();
       }}
     />
   );
