@@ -1,10 +1,21 @@
 'use client';
+import { Block, BlockNoteEditor, PartialBlock } from '@blocknote/core';
 import '@blocknote/core/fonts/inter.css';
 import { BlockNoteView } from '@blocknote/mantine';
 import '@blocknote/mantine/style.css';
-import { useCreateBlockNote } from '@blocknote/react';
 import { useTheme } from 'next-themes';
-import { useCallback, useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+
+async function saveToStorage(jsonBlocks: Block[]) {
+  localStorage.setItem('editorContent', JSON.stringify(jsonBlocks));
+}
+
+async function loadFromStorage(): Promise<PartialBlock[] | undefined> {
+  const storageString = localStorage.getItem('editorContent');
+  return storageString
+    ? (JSON.parse(storageString) as PartialBlock[])
+    : undefined;
+}
 
 export default function Editor() {
   const { theme, systemTheme } = useTheme();
@@ -14,32 +25,34 @@ export default function Editor() {
       ? resolvedTheme
       : 'light';
 
-  const editor = useCreateBlockNote();
+  const [initialContent, setInitialContent] = useState<
+    PartialBlock[] | undefined | ''
+  >('');
 
-  // Load initial Markdown from localStorage
+  // Load initial blocks from localStorage
   useEffect(() => {
-    const loadMarkdownFromStorage = async () => {
-      const savedMarkdown = localStorage.getItem('savedMarkdown');
-      if (savedMarkdown) {
-        const blocks = await editor.tryParseMarkdownToBlocks(savedMarkdown);
-        editor.replaceBlocks(editor.document, blocks);
-      }
-    };
-    loadMarkdownFromStorage();
-  }, [editor]);
+    loadFromStorage().then((content) => setInitialContent(content));
+  }, []);
 
-  // Save Markdown to localStorage on editor change
-  const onChange = useCallback(async () => {
-    const markdown = await editor.blocksToMarkdownLossy(editor.document);
-    localStorage.setItem('savedMarkdown', markdown);
-  }, [editor]);
+  // Create editor only after initial content is loaded
+  const editor = useMemo(() => {
+    if (initialContent === '') return undefined;
+    return BlockNoteEditor.create({ initialContent });
+  }, [initialContent]);
+
+  // Display loading state until editor is ready
+  if (!editor) {
+    return null;
+  }
 
   return (
     <BlockNoteView
       className='h-full py-2 bg-white dark:bg-[#1f1f1f] overflow-y-auto'
       editor={editor}
       theme={blockNoteTheme}
-      onChange={onChange}
+      onChange={() => {
+        saveToStorage(editor.document);
+      }}
     />
   );
 }
