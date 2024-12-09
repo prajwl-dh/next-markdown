@@ -1,3 +1,4 @@
+import MarkdownEditor from '@/components/markdown-editor/MarkdownEditor';
 import Navbar from '@/components/navbar/Navbar';
 import { Button } from '@/components/ui/button';
 
@@ -9,7 +10,9 @@ export default function MarkdownEditorPlayground() {
           Export
         </Button>
       </Navbar>
-      <div className='w-screen h-[calc(100dvh-70px)]'>Markdown Editor</div>
+      <div className='w-screen h-[calc(100dvh-70px)]'>
+        <MarkdownEditor />
+      </div>
     </div>
   );
 }

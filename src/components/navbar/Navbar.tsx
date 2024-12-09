@@ -26,7 +26,7 @@ export default function Navbar({
       initial={initial}
       animate={animate}
       transition={transition}
-      className={`w-full h-[70px] px-4 md:px-14 flex flex-row justify-between shadow-sm items-center fixed left-0 top-0 z-50 bg-transparent dark:bg-foreground backdrop-blur-md bg-opacity-50 dark:bg-opacity-50 border-b-[1px] border-slate-200 dark:border-stone-700`}
+      className={`w-full h-[70px] px-4 md:px-14 flex flex-row justify-between shadow-sm items-center fixed left-0 top-0 z-50 bg-transparent  backdrop-blur-md bg-opacity-50 dark:bg-opacity-50 border-b-[1px] border-slate-200 dark:border-stone-700`}
     >
       <div
         onClick={() => router.push('/')}
