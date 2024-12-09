@@ -31,7 +31,7 @@ export default function MarkdownEditor() {
   return (
     <MDEditor
       data-color-mode={validTheme}
-      className='h-full min-h-full w-full'
+      className='h-full min-h-full w-full md:px-14 scroll-smooth'
       value={value}
       onChange={(value) => {
         setValue(value || ''); // Ensure value is a string

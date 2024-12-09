@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Button } from '../ui/button';
 import { GitHubIcon } from './GitHubIcon';
@@ -27,7 +26,7 @@ export default function Home() {
         for developers and creators seeking a responsive and feature-rich tool
         to enhance their workflow.
       </p>
-      <div className='flex flex-col md:flex-row gap-2'>
+      <div className='flex flex-col md:flex-row gap-4 justify-center w-full'>
         <Button
           className='h-12 min-w-32 flex gap-2 items-center text-md shadow-sm'
           onMouseEnter={() => router.prefetch('/rich-text-editor')}
@@ -42,18 +41,16 @@ export default function Home() {
         >
           Markdown Editor <ArrowRight />
         </Button>
-        <Link
-          href={'https://github.com/prajwl-dh/next-markdown'}
-          target='_blank'
+        <Button
+          onClick={() =>
+            window.open('https://github.com/prajwl-dh/next-markdown', '_blank')
+          }
+          variant={'outline'}
+          className='h-12 min-w-32 flex gap-2 items-center text-md border-neutral-300 shadow-sm'
         >
-          <Button
-            variant={'outline'}
-            className='h-12 min-w-32 flex gap-2 items-center text-md border-neutral-300 shadow-sm'
-          >
-            <p>Contribute</p>
-            <GitHubIcon />
-          </Button>
-        </Link>
+          <p>Contribute</p>
+          <GitHubIcon />
+        </Button>
       </div>
     </motion.div>
   );
