@@ -1,8 +1,8 @@
 import Navbar from '@/components/navbar/Navbar';
-import RichTextPlayground from '@/components/playground/RichTextPlayground';
+import RichTextEditor from '@/components/richtext-editor/RichTextEditor';
 import { Button } from '@/components/ui/button';
 
-export default function Playground() {
+export default function RichTextEditorPlayground() {
   return (
     <div className='flex flex-col justify-between mt-[70px]'>
       <Navbar>
@@ -11,7 +11,7 @@ export default function Playground() {
         </Button>
       </Navbar>
       <div className='w-screen h-[calc(100dvh-70px)]'>
-        <RichTextPlayground />
+        <RichTextEditor />
       </div>
     </div>
   );
