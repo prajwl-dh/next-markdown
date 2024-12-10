@@ -104,5 +104,19 @@
   }
   body {
     @apply bg-background flex flex-col place-items-center;
+
+    .w-md-editor-toolbar ul li button {
+      height: 30px;
+    }
+    .w-md-editor-toolbar ul li button svg {
+      height: 16px !important;
+      width: 19px !important;
+    }
+
+    .w-md-editor-text-pre > code,
+    .w-md-editor-text-input {
+      font-size: 16px !important;
+      line-height: 30px !important;
+    }
   }
 }
