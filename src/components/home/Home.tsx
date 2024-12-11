@@ -13,7 +13,7 @@ export default function Home() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, type: 'spring' }}
-      className='w-full 2xl:w-10/12 px-4 md:px-14 py-[60px] flex flex-col justify-center items-start md:items-center gap-10 z-10 overflow-x-hidden'
+      className='w-full 2xl:w-10/12 px-4 md:px-40 py-[60px] flex flex-col justify-center items-start md:items-center gap-10 z-10 overflow-x-hidden'
     >
       <p className='text-3xl text-start md:text-center font-bold leading-tight text-light-text-primary dark:text-dark-text-primary sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight mt-5 lg:mt-10'>
         Create, Preview, and Export Contents Easily with the Next Editor
