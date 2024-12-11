@@ -103,7 +103,7 @@
     @apply p-0 m-0 scroll-smooth;
   }
   body {
-    @apply bg-background flex flex-col place-items-center;
+    @apply bg-background flex flex-col place-items-center overflow-x-hidden;
 
     .w-md-editor-toolbar ul li button {
       height: 30px;
