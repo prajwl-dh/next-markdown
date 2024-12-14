@@ -5,6 +5,7 @@ import { BlockNoteView } from '@blocknote/mantine';
 import '@blocknote/mantine/style.css';
 import { useTheme } from 'next-themes';
 import { useEffect, useMemo, useState } from 'react';
+import { initialValue } from './initialContent';
 
 async function saveToStorage(jsonBlocks: Block[]) {
   localStorage.setItem('editorContent', JSON.stringify(jsonBlocks));
@@ -12,9 +13,22 @@ async function saveToStorage(jsonBlocks: Block[]) {
 
 async function loadFromStorage(): Promise<PartialBlock[] | undefined> {
   const storageString = localStorage.getItem('editorContent');
-  return storageString
-    ? (JSON.parse(storageString) as PartialBlock[])
-    : undefined;
+  if (storageString) {
+    try {
+      const parsedData = JSON.parse(storageString) as PartialBlock[];
+      if (
+        Array.isArray(parsedData) &&
+        parsedData.some(
+          (block) => Array.isArray(block.content) && block.content.length > 0
+        )
+      ) {
+        return parsedData;
+      }
+    } catch (e) {
+      console.error('Failed to parse storage content:', e);
+    }
+  }
+  return undefined;
 }
 
 export default function Editor() {
@@ -27,11 +41,15 @@ export default function Editor() {
 
   const [initialContent, setInitialContent] = useState<
     PartialBlock[] | undefined | ''
-  >('');
+  >(initialValue);
 
   // Load initial blocks from localStorage
   useEffect(() => {
-    loadFromStorage().then((content) => setInitialContent(content));
+    loadFromStorage().then((content) => {
+      if (content !== undefined) {
+        setInitialContent(content);
+      }
+    });
   }, []);
 
   // Create editor only after initial content is loaded
