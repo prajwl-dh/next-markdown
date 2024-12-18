@@ -32,7 +32,6 @@ async function loadFromStorage(): Promise<PartialBlock[] | undefined> {
 }
 
 export default function Editor({
-  value,
   setValue,
 }: {
   value?: string;
