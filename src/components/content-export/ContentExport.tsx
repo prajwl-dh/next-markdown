@@ -14,9 +14,9 @@ export default function ContentExport({ children }: { children: ReactNode }) {
       <DialogTrigger className='flex text-md bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0'>
         Export
       </DialogTrigger>
-      <DialogContent className='h-dvh sm:h-max'>
-        <DialogHeader className='gap-4'>
-          <DialogTitle>Content Export</DialogTitle>
+      <DialogContent className='h-dvh sm:h-max flex flex-col justify-center gap-10 overflow-y-scroll'>
+        <DialogHeader>
+          <DialogTitle className='mb-[2px]'>Export</DialogTitle>
           <DialogDescription>
             Copy the content in markdown or JSON format
           </DialogDescription>
