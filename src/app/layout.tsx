@@ -13,7 +13,7 @@ const onestSans = Onest({
 export const metadata: Metadata = {
   title: 'Next Editor',
   description:
-    'A modern, lightweight rich text editor, previewer, and markdown converter',
+    'An open-source, lightweight editor for writing and previewing blogs or content in rich text or markdown, with easy export options for seamless integration with web applications.',
 };
 
 export default function RootLayout({
