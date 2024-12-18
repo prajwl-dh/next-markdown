@@ -11,9 +11,24 @@ const onestSans = Onest({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nexteditor.netlify.app'),
   title: 'Next Editor',
   description:
     'An open-source, lightweight editor for writing and previewing blogs or content in rich text or markdown, with easy export options for seamless integration with web applications.',
+  openGraph: {
+    url: 'https://nexteditor.netlify.app',
+    type: 'website',
+    title: 'Next Editor',
+    description:
+      'An open-source, lightweight editor for writing and previewing blogs or content in rich text or markdown, with easy export options for seamless integration with web applications.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: 'https://nexteditor.netlify.app',
+    title: 'Next Editor',
+    description:
+      'An open-source, lightweight editor for writing and previewing blogs or content in rich text or markdown, with easy export options for seamless integration with web applications.',
+  },
 };
 
 export default function RootLayout({
