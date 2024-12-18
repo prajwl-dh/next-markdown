@@ -8,8 +8,6 @@ import React from 'react';
 export default function RichTextEditorPlayground() {
   const [value, setValue] = React.useState<string>('');
 
-  console.log(value);
-
   return (
     <div className='flex flex-col justify-between mt-[70px]'>
       <Navbar>
