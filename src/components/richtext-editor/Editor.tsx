@@ -31,7 +31,13 @@ async function loadFromStorage(): Promise<PartialBlock[] | undefined> {
   return undefined;
 }
 
-export default function Editor() {
+export default function Editor({
+  value,
+  setValue,
+}: {
+  value?: string;
+  setValue: React.Dispatch<React.SetStateAction<string>>;
+}) {
   const { theme, systemTheme } = useTheme();
   const resolvedTheme = theme === 'system' ? systemTheme : theme;
   const blockNoteTheme =
@@ -58,13 +64,29 @@ export default function Editor() {
     return BlockNoteEditor.create({ initialContent });
   }, [initialContent]);
 
+  useEffect(() => {
+    if (editor && initialContent) {
+      (async () => {
+        const editorContent = await editor.blocksToMarkdownLossy(
+          editor.document
+        );
+        if (editorContent) {
+          setValue(editorContent);
+        }
+      })();
+    }
+  }, [editor, initialContent, setValue]);
+
   // Display loading state until editor is ready
   if (!editor) {
     return null;
   }
 
   async function convertToMarkdown() {
-    // const editorContent = await editor?.blocksToMarkdownLossy(editor.document);
+    const editorContent = await editor?.blocksToMarkdownLossy(editor.document);
+    if (editorContent) {
+      setValue(editorContent);
+    }
   }
 
   return (

@@ -40,7 +40,7 @@ export default function CodeBlock({
       <pre
         ref={codeRef}
         className={`rounded-md py-2 pl-2 w-full overflow-scroll text-secondaryText ${
-          variant !== 'JSON' ? 'h-[30dvh]' : 'h-[5dvh]'
+          variant !== 'JSON' ? 'h-[45dvh]' : 'h-[5dvh]'
         }`}
       >
         <code>{children}</code>
