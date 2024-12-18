@@ -1,9 +1,10 @@
-# Next Markdown
+# Next Editor
 
-**Next Markdown** is a modern, lightweight rich text editor built using **Next.js**, **React**, **TailwindCSS**, and **MDX**. It provides live content preview and offers export functionality in both markdown syntax and as a JSON object, making it easy to integrate with markdown-to-HTML converters on your website. This tool enables seamless content management and dynamic rendering across platforms.
+**Next Editor** is a lightweight, free-to-use editor that allows you to write and preview blogs and other content instantly in rich text format or markdown format. It also enables you to export your work as markdown, facilitating seamless integration with your web applications. Perfect for developers and creators seeking a responsive and feature-rich tool to enhance their workflow.
 
 ## Features
 
-- **Interactive Markdown Editing**: Write and preview rich text with live updates.
+- **Interactive Markdown Editing**: Write and preview markdown text with live preview.
+- **Rich Text Editing**: Write rich text format in notion style block text editor.
 - **Export Functionality**: Save your content in markdown or JSON format.
-- **Beautiful UI**: Designed with TailwindCSS for a clean, responsive experience.
+- **Beautiful UI**: Designed with TailwindCSS for a clean, responsive experience across all devices.
